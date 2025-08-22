@@ -31,7 +31,8 @@ If you need help with the installation or want to learn how to use WireShark, yo
 
 **Video link:** [Wireshark Tutorial for Beginners | Network Scanning Made Easy](https://www.youtube.com/watch?v=qTaOZrDnMzQ)
 
-<p align=center>
-<iframe width="550" height="400" src="https://www.youtube.com/embed/qTaOZrDnMzQ" title="Wireshark Tutorial for Beginners | Network Scanning Made Easy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></p>
+[![Watch the video][def2]][def3]
 
 [def1]: https://www.wireshark.org/
+[def2]: https://img.youtube.com/vi/qTaOZrDnMzQ/hqdefault.jpg
+[def3]: https://www.youtube.com/watch?v=qTaOZrDnMzQ
