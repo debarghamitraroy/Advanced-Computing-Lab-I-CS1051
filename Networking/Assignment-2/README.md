@@ -100,6 +100,8 @@
 
 - Open [WireShark][def2] and click on `wlo1` to capture the packets.
 
+  [![WireShark Capture][def22]][def22]
+
 - To find the IP address of [`nitdgp.ac.in`][def3], run the below command in terminal:
 
   ```bash
@@ -117,7 +119,7 @@
 - Open terminal and run the below command to connect to the server of [`nitdgp.ac.in`][def3]:
 
   ```bash
-  telnet nitdgp.ac.in 80 # port 80 is used for HTTP and 443 for HTTPS
+  telnet nitdgp.ac.in 80
   ```
 
   or,
@@ -218,9 +220,9 @@
 
 ### Solution-3 (d)
 
-- Open [WireShark][def2] and click on `Loopback: lo` to capture the packets.
+- Open [WireShark][def2] and click on `wlo1` to capture the packets.
 
-  [![WireShark Capture][def4]][def4]
+  [![WireShark Capture][def22]][def22]
 
 - Open terminal and run the below command to connect to the server of [`nitdgp.ac.in`][def3]:
 
@@ -250,7 +252,7 @@
 
   [![TCP Packet Capture][def18]][def18]
 
-- In the top packet list, look for the **first TCP packet** from your IP $\rightarrow$ $14.139.221.27$ with Info column showing `SYN`.
+- In the top packet list, look for the **first TCP packet** from your IP $\rightarrow 14.139.221.27$ with Info column showing `SYN`.
 
 - Click on that packet to see the details in the middle pane.
 
@@ -262,7 +264,7 @@
 
   In this case, the sequence number (raw) is $2805640763$.
 
-  > The sequence number of the TCP `SYN` segment sent by the client computer to [nitdgp.ac.in][def3] was $2805640763$ (this value is chosen randomly by the client’s TCP stack). In Wireshark, it is displayed as $0$ in relative terms.
+  > The sequence number of the TCP `SYN` segment sent by the client computer to [`nitdgp.ac.in`][def3] was $2805640763$ (this value is chosen randomly by the client’s TCP stack). In Wireshark, it is displayed as $0$ in relative terms.
 
 ### Solution-3 (e)
 
@@ -276,6 +278,67 @@ So, The thing that identifies the segment as a `SYN` segment is:
 - The `ACK` flag is $0$ (since this is the very first packet from the client).
 
   > The segment is identified as a `SYN` segment because the `SYN` flag is set in the TCP header (Flags field). In Wireshark, this appears as `Flags: 0x002` (`SYN`).
+
+### Solution-3 (f)
+
+- Open [WireShark][def2] and click on `wlo1` to capture the packets.
+
+  [![WireShark Capture][def22]][def22]
+
+- Open terminal and run the below command to connect to the server of [`nitdgp.ac.in`][def3]:
+
+  ```bash
+  telnet nitdgp.ac.in 80
+  ```
+
+  or,
+
+  ```bash
+  curl http://nitdgp.ac.in
+  ```
+
+  or,
+  Alternatively, you can also open any browser and go to [`nitdgp.ac.in`][def3].
+
+  [![WireShark Capture][def17]][def17]
+
+- Now go to the [WireShark][def2] window and filter the packets by typing below command in the filter bar.
+
+  ```ini
+  ip.addr == 14.139.221.27 && tcp
+  ```
+
+- You can see the TCP packets in the [WireShark][def2] window.
+
+  [![TCP Packet Capture][def23]][def23]
+
+- In the top packet list, look for the **second TCP packet** from your IP $\rightarrow 14.139.221.27$ with Info column showing `SYN, ACK`.
+
+- Click on that packet to see the details in the middle pane.
+
+  [![SYN-ACK Packet][def24]][def24]
+
+So, The Sequence Number of the `SYN-ACK` segment is the server’s own Initial Sequence Number (ISN).
+
+> The sequence number of the `SYN-ACK` segment sent by [`nitdgp.ac.in`][def3] was $3427571096$ (server’s Initial Sequence Number). Wireshark shows this as $0$ in relative numbering for readability.
+
+### Solution-3 (g)
+
+> The value of the Acknowledgement field in the `SYN-ACK` segment is equal to the client’s Initial Sequence Number plus $1$. In our capture, Wireshark displayed it as $1$ (relative), corresponding to the client’s `ISN + 1` ie. $3549778751$ i this case.
+
+[![SYN-ACK Acknowledgement][def24]][def24]
+
+### Solution-3 (h)
+
+> [`nitdgp.ac.in`][def3] determined the value of the Acknowledgement field by taking the Initial Sequence Number (ISN) from the client’s `SYN` segment and adding $1$. This is required because the `SYN` flag consumes one sequence number, so the next expected byte from the client is `ISN + 1`.
+
+[![SYN-ACK Acknowledgement][def24]][def24]
+
+### Solution-3 (i)
+
+> The segment is identified as a `SYN-ACK` segment because in the TCP header, both the `SYN` flag and the `ACK` flag are set (`SYN = 1`, `ACK = 1`). This distinguishes it from the initial `SYN` (which has `ACK = 0`) and from later pure `ACK` packets (which have `SYN = 0`, `ACK = 1`).
+
+[![SYN-ACK Packet Flags][def24]][def24]
 
 [def1]: https://sites.google.com/view/sscomputernetworks/assignments/2024-25/assignment-2
 [def2]: https://www.wireshark.org/
@@ -299,3 +362,5 @@ So, The thing that identifies the segment as a `SYN` segment is:
 [def20]: ../images/img_11.png
 [def21]: ../images/img_12.png
 [def22]: ../images/img_13.png
+[def23]: ../images/img_14.png
+[def24]: ../images/img_15.png
