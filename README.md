@@ -6,7 +6,7 @@ This repository contains the course materials for **Advanced Computing Lab I (CS
 
 To contribute to the repo [Advanced-Computing-Lab-I-CS1051][def1], you should follow the standard GitHub contribution workflow. Here’s a step-by-step guide:
 
-### 1. Fork the repository (for external contributors)
+### 1. Fork the repository
 
 - Go to your repo’s GitHub page.
 - Click **Fork** (top-right corner).
