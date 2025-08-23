@@ -69,24 +69,24 @@ If you need help with the installation or want to learn how to use WireShark, yo
 
 [![Watch the video][def20]][def21]
 
-[def1]: ./Networking/Assignment-1/README.md#assignment-1-copy-the-one-file-from-one-location-to-another-location-using-binary-mode-that-is-binary-file-handling
-[def2]: ./Networking/Assignment-1/README.md#solution
-[def3]: ./Networking/Assignment-2/README.md#assignment-2-analysis-of-tcpip-protocol-stack
-[def4]: ./Networking/Assignment-2/README.md#solution-1
-[def5]: ./Networking/Assignment-2/README.md#solution-2
-[def6]: ./Networking/Assignment-2/README.md#solution-3-a
-[def7]: ./Networking/Assignment-2/README.md#solution-3-b
-[def8]: ./Networking/Assignment-2/README.md#solution-3-c
-[def9]: ./Networking/Assignment-2/README.md#solution-3-d
-[def10]: ./Networking/Assignment-2/README.md#solution-3-e
-[def11]: ./Networking/Assignment-2/README.md#solution-3-f
-[def12]: ./Networking/Assignment-2/README.md#solution-3-g
-[def13]: ./Networking/Assignment-2/README.md#solution-3-h
-[def14]: ./Networking/Assignment-2/README.md#solution-3-i
-[def15]: ./Networking/Assignment-3/README.md#assignment-3-udp-audio-file-transfer
-[def16]: ./Networking/Assignment-3/README.md#solution
-[def17]: ./Networking/Assignment-4/README.md#tasks
-[def18]: ./Networking/Assignment-4/README.md#solution
+[def1]: ./Assignment-1/README.md#assignment-1-copy-the-one-file-from-one-location-to-another-location-using-binary-mode-that-is-binary-file-handling
+[def2]: ./Assignment-1/README.md#solution
+[def3]: ./Assignment-2/README.md#assignment-2-analysis-of-tcpip-protocol-stack
+[def4]: ./Assignment-2/README.md#solution-1
+[def5]: ./Assignment-2/README.md#solution-2
+[def6]: ./Assignment-2/README.md#solution-3-a
+[def7]: ./Assignment-2/README.md#solution-3-b
+[def8]: ./Assignment-2/README.md#solution-3-c
+[def9]: ./Assignment-2/README.md#solution-3-d
+[def10]: ./Assignment-2/README.md#solution-3-e
+[def11]: ./Assignment-2/README.md#solution-3-f
+[def12]: ./Assignment-2/README.md#solution-3-g
+[def13]: ./Assignment-2/README.md#solution-3-h
+[def14]: ./Assignment-2/README.md#solution-3-i
+[def15]: ./Assignment-3/README.md#assignment-3-udp-audio-file-transfer
+[def16]: ./Assignment-3/README.md#solution
+[def17]: ./Assignment-4/README.md#tasks
+[def18]: ./Assignment-4/README.md#solution
 [def19]: https://www.wireshark.org/
 [def20]: https://img.youtube.com/vi/qTaOZrDnMzQ/hqdefault.jpg
 [def21]: https://www.youtube.com/watch?v=qTaOZrDnMzQ
