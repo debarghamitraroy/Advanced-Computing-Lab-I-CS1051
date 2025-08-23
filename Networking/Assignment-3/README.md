@@ -1,6 +1,6 @@
 # Assignment-3: UDP Audio File Transfer
 
-## Transfer an audio ([audio.wav][def1]) file from a client to a server using UDP
+Transfer an audio ([audio.wav][def1]) file from a client to a server using UDP.
 
 ---
 
