@@ -8,7 +8,7 @@
 
    (b) What is the IP address of [`nitdgp.ac.in`][def3]? On what port number is it sending and receiving TCP segments for this connection?
 
-   (c) Write a small socket program for the `URGENT` pointer and `URGENT` flag?
+   (c) Write a small socket program for the `URGENT` pointer and `URGENT` flag.
 
    (d) What is the sequence number of the TCP `SYN` segment that is used to initiate the TCP connection between the client computer and [`nitdgp.ac.in`][def3]?
 
